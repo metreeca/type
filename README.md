@@ -292,7 +292,7 @@ function aFailure(): Guard<Failure> {
 }
 ```
 
-## Recursive Definitions
+## Recursion
 
 Define self-referencing types by using guard factory functions. The factory pattern enables lazy evaluation and breaks
 infinite recursion.
@@ -313,14 +313,17 @@ function aNode(): Guard<Node> {
 }
 ```
 
-## Mutually Recursive Types
+## Putting It All Together
 
-The factory pattern also supports mutually recursive types and complex hierarchies like discriminated union trees.
+A realistic example combining multiple patterns from previous sections.
 
 ```typescript
 import { any, anObject, anArray, aNumber, type Guard } from "@metreeca/type";
 
-type Shape = Circle | Rectangle | Composite;
+type Shape = 
+    | Circle
+    | Rectangle 
+    | Composite;
 
 interface Circle {
     readonly type: "circle";
@@ -343,7 +346,11 @@ interface Composite {
 }
 
 function aShape(): Guard<Shape> {
-    return any({ aCircle, aRectangle, aComposite });
+    return any({ 
+        aCircle, 
+        aRectangle, 
+        aComposite 
+	});
 }
 
 function aCircle(): Guard<Circle> {
