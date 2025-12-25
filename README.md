@@ -130,7 +130,7 @@ function aProfile(): Guard<Profile> {
 }
 ```
 
-## Validating Arrays
+## Arrays
 
 Use `anArray()` without arguments to accept any array, or with an element guard to validate each item.
 
@@ -375,8 +375,8 @@ function aComposite(): Guard<Composite> {
 
 # Support
 
-- open an [issue](https://github.com/metreeca/type/issues) to report a problem or to suggest a new feature
-- start a [discussion](https://github.com/metreeca/type/discussions) to ask a how-to question or to share an idea
+- Open an [issue](https://github.com/metreeca/type/issues) to report a problem or to suggest a new feature
+- Start a [discussion](https://github.com/metreeca/type/discussions) to ask a how-to question or to share an idea
 
 # License
 
