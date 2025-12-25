@@ -7,8 +7,10 @@
   "sortEntryPoints": false,
   "categorizeByGroup": true,
   "groupOrder": [
-    "Type Aliases",
-    "Interfaces",
+    "Types",
+    "Assertions",
+    "Guards",
+    "Combinators",
     "*"
   ],
   "useFirstParagraphOfCommentAsSummary": true,
